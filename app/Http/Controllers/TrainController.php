@@ -9,5 +9,9 @@ use Illuminate\Http\Request;
 
 class TrainController extends Controller
 {
-    //
+    public function getTrains()
+    {
+        $trains = Train::all();
+        return view('trains', compact('trains'));
+    }
 }
