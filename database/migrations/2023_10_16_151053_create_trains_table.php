@@ -21,8 +21,8 @@ return new class extends Migration
             $table->time('departure', $precision = 0);
             $table->time('arrival', $precision = 0);
             $table->unsignedTinyInteger('carriages');
-            $table->boolean('delayed');
-            $table->boolean('canceled');
+            $table->boolean('delayed')->default(false);
+            $table->boolean('canceled')->default(false);
             $table->timestamps();
         });
     }
