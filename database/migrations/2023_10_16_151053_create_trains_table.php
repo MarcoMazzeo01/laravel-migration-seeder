@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('arrival_station', 50);
             $table->time('departure', $precision = 0);
             $table->time('arrival', $precision = 0);
-            $table->smallInteger('carriages');
+            $table->unsignedTinyInteger('carriages');
             $table->boolean('delayed');
             $table->boolean('canceled');
             $table->timestamps();
